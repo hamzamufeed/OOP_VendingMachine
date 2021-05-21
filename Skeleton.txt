@@ -1,0 +1,67 @@
+Start Vending Maching
+Fill machine with snacks
+Fill machine with money
+while(true):
+Display Items
+	Wait for input from user
+	if Item slot is not empty:
+		display its name, price and count
+		ask if the user want to buy the selected item
+		if yes:
+			ask for paying method the user want to use: coins/notes/card
+			user chooses the method and insert money
+			if choice is coins:
+				the machine validates the coins and shows the entered balance
+				while(money not equal item price):
+					insert more coins
+				decrement item count by 1
+				decrement balance by item price
+				increment machine's balance by item price
+				dispense snack
+				if balance not equal 0:
+					ask user if he wants to despinse change
+					if yes:
+						calculate chnage
+						decrement machine balance
+						balance equal 0
+						break
+					if no:
+						continue
+			if choice is notes:
+				the machine validates the note and shows the entered balance
+				while(money not equal item price):
+					insert more notes
+				decrement item count by 1
+				decrement balance by item price
+				increment machine's balance by item price
+				dispense snack
+				if balance not equal 0:
+					ask user if he wants to despinse change
+					if yes:
+						calculate chnage
+						decrement machine balance
+						balance equal 0
+						break
+					if no:
+						continue
+
+			if choice is card:
+				the user inserts the card
+				the machine validates the card and shows its balance
+				if balance is equal or greater than item price
+					decrement item count by 1
+					decrement card balance by item price
+					increment machine's credit balance by item price
+					dispense snack
+			if choice is go back:
+				contine
+		if no:
+			continue to choose another item
+	if balance not equal 0:
+		ask user if he want to despinse change
+			if yes:
+				calculate chnage
+				decrement machine balance
+				balance equal 0
+			if no:
+				continue
